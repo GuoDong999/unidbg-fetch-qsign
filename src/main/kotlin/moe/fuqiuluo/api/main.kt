@@ -27,7 +27,7 @@ data class APIInfo(
 
 fun Routing.index() {
     get("/") {
-        call.respond(APIResult(0, "IAA 云天明 章北海", APIInfo(
+        call.respond(APIResult(0, "绘梦我的世界 docs.hmmc.top", APIInfo(
             version = BuildConfig.version,
             protocol = CONFIG.protocol,
             pid = runCatching{ ManagementFactory.getRuntimeMXBean().name.split("@")[0].toInt() }.getOrNull() ?: -1
